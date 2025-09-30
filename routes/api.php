@@ -13,11 +13,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/products/semuanya', [ProductController::class, 'index']);
 // 2. Cari produk tersedia berdasarkan nama
 Route::get('/products/cari', [ProductController::class, 'search']);
-// 3. Tambah Produk
+// 3. Ambil Produk berdasarkan id
+Route::get('/products/{id}', [ProductController::class, 'show']);
+// 4. Tambah Produk
 Route::post('/product/tambah', [ProductController::class, 'store']);
-// 4. Ubah Produk
+// 5. Ubah Produk
 Route::put('/product/ubah/{id}', [ProductController::class, 'update']);
-// 5. Hapus Produk
+// 6. Hapus Produk
 Route::delete('/product/hapus/{id}', [ProductController::class, 'destroy']);
 
 
