@@ -14,7 +14,7 @@ Route::get('/products/semuanya', [ProductController::class, 'index']);
 // 2. Cari produk tersedia berdasarkan nama
 Route::get('/products/cari', [ProductController::class, 'search']);
 // 3. Ambil Produk berdasarkan id
-Route::get('/products/{id}', [ProductController::class, 'show']);
+Route::get('/product/{id}', [ProductController::class, 'show']);
 // 4. Tambah Produk
 Route::post('/product/tambah', [ProductController::class, 'store']);
 // 5. Ubah Produk
