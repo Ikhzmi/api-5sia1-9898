@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "46828774-3ac4c0f5-5e7f-46d3-a93d-0be125007ca0",
+		"name": "API 5SIA 1 (M. Ikhsan Azmi)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"id": "46828774-49900224-1e44-4eb1-9126-b2450fe36753",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"field_name\" : value\r\n    \"nama\" : \"FufuFafa\",\r\n    \"surel\" : \"fufuokegas@gmail.com\",\r\n    \"telp\" : \"081234567890\",\r\n    \"sandi\" : \"passwordku\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/register",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"id": "46828774-14b8c7d5-b644-4a55-b742-6e56a112a824",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"surel\" : \"alisa56@example.net\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/user/edit/2",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"user",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find User",
+					"id": "46828774-410be06e-05aa-4c9d-ad41-65455def7044",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/user/find?id=5",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"user",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"id": "46828774-4eb528ab-e31a-4f58-9d3a-12115fae3680",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/user/delete",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search User",
+					"id": "46828774-0c1a8d1c-6dc9-4a58-9d53-9aad5ad652c3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/user/search?nama=rah",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"user",
+								"search"
+							],
+							"query": [
+								{
+									"key": "nama",
+									"value": "rah"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Users",
+					"id": "46828774-fbe5dd85-2316-4a8a-a5db-bf6e032270a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/users",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "46828774-36ec6395-c87c-4a2d-a4d0-6e8c7bdb20a9"
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Semua Produk",
+					"id": "46828774-de6bf070-2d2f-4965-888c-00cc99b8ecd9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/products/semuanya",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"products",
+								"semuanya"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cari Produk",
+					"id": "46828774-04aea009-fc4a-4139-956b-969f218ce931",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/products/cari?teks=perum",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"products",
+								"cari"
+							],
+							"query": [
+								{
+									"key": "teks",
+									"value": "perum",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ubah Produk",
+					"id": "46828774-df695ee9-72f7-4fed-86d2-38a5bc5f2039",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\"         : 4999999\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/product/ubah/202",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"product",
+								"ubah",
+								"202"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tambah Produk",
+					"id": "46828774-e288ecbd-5409-4afc-ab9e-98844bda9e02",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\"   : 16,\r\n    \"name\"      : \"Lenovo Thinkpad\",\r\n    \"image_path\": \"C://Acer\",\r\n    \"is_Available\" : 1,\r\n    \"stock\"         : 5,\r\n    \"price\"         : 5000000,\r\n    \"description\"   : \"Laptop Tempur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/product/tambah",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"product",
+								"tambah"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hapus Produk",
+					"id": "46828774-d0d6458e-d8f1-4dc3-a23d-852de149aca1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/product/hapus/199",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"product",
+								"hapus",
+								"199"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cari Produk (ID)",
+					"id": "46828774-4f1daaa9-3f6d-4635-8f8d-3ee3e997b30d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ENDPOINT_URL}}/product/52",
+							"host": [
+								"{{ENDPOINT_URL}}"
+							],
+							"path": [
+								"product",
+								"52"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "46828774-e6e67ab8-cac2-4edc-bcaa-51f6e8a003dd"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a35d4c43-beac-4d14-8221-acc5eb5a3a72",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8749cb83-4655-4e01-9d9d-5ba6459bd174",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ENDPOINT_URL",
+			"value": "http://api-5sia1.test/api",
+			"type": "string"
+		}
+	]
+}
